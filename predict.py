@@ -141,7 +141,7 @@ regression.add(Dense(units = 6, kernel_initializer = 'uniform', activation='tanh
 regression.add(Dropout(0.2))
 regression.add(Dense(units = 6, kernel_initializer = 'uniform'))
 regression.add(Dense(units = 1))
-regression.compile(optimizer = 'adam', loss = error_pred)
+regression.compile(optimizer = 'adam', loss = loss)
 regression.fit(X, y_train,batch_size=64,epochs=10)
 y_pred = regression.predict(X_test)
 test = pd.read_csv('test.csv')
